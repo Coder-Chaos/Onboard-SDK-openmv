@@ -1291,8 +1291,8 @@ bool moveByVelCtrl(DJI::OSDK::Vehicle *vehicle, float xOffsetDesired,
         std::abs(yOffsetRemaining) < posThresholdInM &&
         std::abs(yawInRad - yawDesiredRad) < yawThresholdInRad && 
         std::abs(zOffsetRemaining) < 0.2f &&
-        std::abs(currentVelocity.x) < 0.1f && std::abs(currentVelocity.y) < 0.1f &&
-        std::abs(currentVelocity.z) < 0.1f)
+        std::abs(currentVelocity.x) < 0.01f && std::abs(currentVelocity.y) < 0.01f &&
+        std::abs(currentVelocity.z) < 0.01f)
     {
       //! 1. We are within bounds; start incrementing our in-bound counter
       withinBoundsCounter += cycleTimeInMs;
